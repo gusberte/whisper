@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-whisper-cli"
+version = "0.1.0"
+description = "Transcripción local de videos con OpenAI Whisper"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["openai-whisper"]
+
+[project.scripts]
+transcribir-video = "video_whisper.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
